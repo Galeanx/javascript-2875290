@@ -1,41 +1,96 @@
-.container {
-    margin: 200px auto;
-    width: 700px;
-    height: 400px;
-    background-color: white;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-
-}
-
 body {
     background-color: black;
-} 
+}
 
-@keyframes moverycambiar {
-    0% {
-        bottom: 100px;
-        background-color: rgb(35, 92, 199);
-    }
-    50% {
-        bottom: 200px;
-        background-color: rgb(255, 106, 0);
-    }
-    100% {
-        bottom: 100px;
-        background-color: rgb(210, 43, 205);
-    }
+.container {
+    height: 400px;
+    width: 100%;
+    max-width: 700px;
+    margin: 200px auto;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    position: relative;
 }
 
 .sol {
-    width: 110px;
-    height: 110px;
-    background-color: rgb(210, 199, 43);
-    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 249, 63);
+    border-radius: 50%;
+    bottom: 120px;
+    right: 170px;
+    z-index: 1;
     position: absolute;
-    bottom: 100px;
-    right: 200px;
-    animation: moverycambiar 2s infinite; 
+   /* animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-name: moverSol;
+    animation-delay: 0.2s;*/
 }
 
+.guia {
+    z-index: 3;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@keyframes moverSol {
+    0% { }
+    50% { 
+        bottom: 450px;
+        background-color: orange;
+    }
+}
+
+.nube1, .nube2, .nube3 {
+    position: absolute;
+    width: 25%;
+}
+
+.nube1 {
+    bottom: 150px;
+    animation: moverNube1 9s linear infinite;
+}
+
+.nube2 {
+    bottom: 240px;
+    animation: moverNube2 15s linear infinite;
+}
+
+.nube3 {
+    bottom: 130px;
+    animation: moverNube3 12s linear infinite;
+}
+
+@keyframes moverNube1 {
+    0% {
+        left: -30%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes moverNube2 {
+    0% {
+        left: -30%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes moverNube3 {
+    0% {
+        left: -30%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.montaña img {
+    width: 100%;
+    padding-top: 185px;
+    position: relative;
+    z-index: 2;
+}
