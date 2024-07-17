@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+}
+
+.poster {
+    position: relative;
+    width: 80%;
+    height: 80vh;
+    background: url('fondo_Mesa\ de\ trabajo\ 1.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    border: 5px solid #fff;
+    border-radius: 15px;
+    text-align: center;
+    animation: background-flicker 3s infinite;
+}
+
+@keyframes background-flicker {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(0.7); }
+}
+
+#welcome-text {
+    color: #ff8c00;
+    font-size: 4.5rem; 
+    font-family: 'Verdana', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    margin-top: 40px; 
+    animation: text-glow 3s ease-in-out infinite alternate; 
+}
+
+@keyframes text-glow {
+    0%, 100% { text-shadow: 2px 2px 8px rgba(255, 140, 0, 0.8); }
+    50% { text-shadow: 2px 2px 12px rgba(255, 140, 0, 1); }
+}
+
+@keyframes text-move {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+#welcome-text {
+    color: #ff8c00; 
+    font-size: 3.5rem; 
+    font-family: 'Verdana', sans-serif; 
+    text-shadow: 0 0 10px rgba(255, 140, 0, 0.8); 
+    margin-top: 40px; 
+    animation: text-glow 3s ease-in-out infinite alternate, text-move 5s ease-in-out infinite alternate; 
+}
+
+@keyframes text-glow {
+    0%, 100% { text-shadow: 0 0 10px rgba(255, 140, 0, 0.8); }
+    50% { text-shadow: 0 0 15px rgba(255, 140, 0, 1); }
+}
+
+.witch, .pumpkin, .bat {
+    position: absolute;
+    width: 250px; 
+    height: 250px; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 50%;
+    transform: translateY(10%);}
+
+.left-witch {
+    background: url('bruja.svg') no-repeat;
+    top: 20%;
+    left: -100px;
+}
+
+.right-witch {
+    background: url('bruja2.svg') no-repeat;
+    top: 20%;
+    right: -100px;
+}
+
+.pumpkin1, .pumpkin2, .pumpkin3 {
+    background: url('calabaza1.svg') no-repeat;
+    bottom: 20px;
+    width: 80px;
+    height: 80px;
+}
+
+.pumpkin1 { left: 20%; }
+.pumpkin2 { left: 45%; }
+.pumpkin3 { left: 70%; }
+
+
+#start-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #ff8c00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
