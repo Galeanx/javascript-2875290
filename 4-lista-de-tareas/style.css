@@ -1,0 +1,124 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.fondo-imagen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('ww.jpg'); 
+    background-size: cover;
+    background-position: center;
+    z-index: -1; 
+}
+
+.contenedor {
+    background: #ffffff; 
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    text-align: center;
+    border-bottom: 2px solid rgb(41, 248, 0); 
+    position: relative; 
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.entrada-contenedor {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+#nueva-tarea {
+    padding: 12px;
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#nueva-tarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+#boton-agregar {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#boton-agregar:hover {
+    background-color: #45a049;
+}
+
+#lista-tareas {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tarea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+.tarea.completada {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.tarea:hover {
+    background-color: #f1f1f1;
+}
+
+.tarea button {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#boton-borrar-todo {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#boton-borrar-todo:hover {
+    background-color: #e53935;
+}
