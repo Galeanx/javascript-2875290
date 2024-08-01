@@ -1,4 +1,92 @@
-let nombre = 'José'
+const formulario = document.querySelector('.formulario')
+const username = document.querySelector('.username')
+const password = document.querySelector('.password')
+
+
+
+//Inicio de sesion
+
+function validarUsuario (e){
+    e.preventDefault();
+
+    let currentUser = JSON.parse( localStorage.getItem('user') )
+    console.log(currentUser.userName)
+    console.log(currentUser.userPass)
+
+    console.log(Boolean(username.value === currentUser.userName));
+    console.log(Boolean(password.value === currentUser.userPass));
+
+    if(username.value === currentUser.userName && password.value === currentUser.userPass){
+        console.log('Felicidades puedes entrar 🔥')
+        window.location = "./userpage.html"
+        console.log
+    }else{
+        console.log('Siga intentando parcerito 🥵')
+    }
+
+    formulario.reset()
+}
+
+formulario.addEventListener('submit', validarUsuario)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* let nombre = 'José'
 let items = ['uno', 'dos', 'tres', 'cuatro','cinco']
 let pelicula = {
     id: 10,
@@ -51,7 +139,7 @@ borrarItem ('carrito')
 borrarItem ('name')
  */
 
-function borrarTodo (){
+/* function borrarTodo (){
     localStorage.clear()
 }
 
@@ -70,4 +158,4 @@ document.getElementById('formularioInicioSesion').addEventListener('submit', fun
     } else {
         mensajeError.textContent = 'Usuario o contraseña incorrectos';
     }
-});
+}); */ 
