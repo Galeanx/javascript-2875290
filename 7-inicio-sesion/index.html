@@ -10,7 +10,7 @@
     <div class="contenedor">
         <div class="formulario-contenedor">
             <h2 class="titulo">Iniciar Sesión</h2>
-            <form onsubmit="iniciarSesion(); return false;">
+            <form id="loginForm" action="../7-inicio-sesion/html/pagina.html" method="post" onsubmit="return validarFormulario();">
                 <div class="grupo-campo">
                     <label for="usuario" class="etiqueta">Usuario</label>
                     <input type="text" id="usuario" name="usuario" class="campo" required>
@@ -24,6 +24,6 @@
             </form>
         </div>
     </div>
-    <script src="js/index.js"></script>
+    <script src="../7-inicio-sesion/js/index.js"></script>
 </body>
 </html>

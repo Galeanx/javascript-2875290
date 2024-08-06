@@ -1,7 +1,6 @@
-// index.js
-
-function iniciarSesion() {
-    // Obtener los valores de los campos
+function validarFormulario() {
+    // Aquí puedes validar el formulario antes de enviar
+    // Por ejemplo, verificar que las credenciales sean correctas
     const usuario = document.getElementById('usuario').value;
     const contraseña = document.getElementById('contraseña').value;
 
@@ -10,10 +9,15 @@ function iniciarSesion() {
     const contraseñaRegistrada = localStorage.getItem('contraseña');
 
     if (usuario === usuarioRegistrado && contraseña === contraseñaRegistrada) {
-        // Redirigir a la página principal o a otro lugar
         alert('Inicio de sesión exitoso');
-        // Aquí puedes redirigir a otra página si es necesario
+        // Permitir el envío del formulario
+        return true;
     } else {
         alert('Usuario o contraseña incorrectos');
+        // Evitar el envío del formulario
+        return false;
     }
+
+    
+
 }
