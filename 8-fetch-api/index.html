@@ -1,14 +1,31 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="rickymorty.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="container"></div>
-    <!-- <script src="./app.js"></script> -->
-    <script src="rickmorty.js"></script>
+    <header>
+        <form id="buscador">
+            <input type="text">
+            <select id="listaStatus">
+                <option value="all">All 🌐</option>
+                <option value="Alive">Alive 🟢</option>
+                <option value="Dead">Dead 🔴</option>
+                <option value="unknown">Unknown ❔</option>
+
+            </select>
+            <button type="submit">Buscar</button>
+        </form>
+    </header>
+
+
+
+    <div class="container">
+
     
+<!--     <script src="app.js"></script> -->
+    <script src="rickmorty.js"></script>
 </body>
 </html>
