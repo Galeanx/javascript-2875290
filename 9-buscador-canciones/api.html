@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="api.css">
+    <title>Buscador de Música</title>
+</head>
+<body>
+    <header>
+        <form id="buscador">
+            <input type="text" id="textoBusqueda" placeholder="Buscar canciones...">
+            <select id="listaStatus">
+                <option value="Todo">Todo 🌐</option>
+                <option value="Reggaeton">Reggaeton</option>
+                <option value="Pop">Pop</option>
+                <option value="Rap">Rap</option>
+                <option value="Dancehall">Dancehall</option>
+                <option value="Rock">Rock</option>
+                <button type="submit">Buscar</button>
+            </select>
+            <button type="submit">Buscar</button>
+        </form>
+        <div id="resultados"></div>
+    </header>
+
+    <div id="results" class="container">
+    </div>
+    <script src="api.js"></script>
+</body>
+</html>
