@@ -1,0 +1,100 @@
+.banner {
+    display: flex;
+    align-items: center;
+    background-color: #1D938A;
+    padding: 0px;
+    width: 100%;
+    height: 200px; /* Fija la altura del banner */
+    box-sizing: border-box;
+    position: fixed; /* Fija el banner en la parte superior de la pantalla */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que el banner esté sobre otros elementos */
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    max-height: 250px; /* Limita la altura del logo para que no afecte el tamaño del banner */
+    width: auto;
+    /* Aquí puedes ajustar el tamaño del logo */
+}
+
+.search-container {
+    position: absolute; /* Permite mover la barra de búsqueda libremente */
+    top: 50%; /* Centra verticalmente dentro del banner */
+    left: 50%; /* Centra horizontalmente dentro del banner */
+    transform: translate(-152%, -50%); /* Centra la barra de búsqueda exactamente en el medio del banner */
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 5px 20px; /* Agrega padding interno */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    /* Puedes ajustar las propiedades top, left, right, bottom para mover la barra de búsqueda */
+}
+
+.search-bar {
+    flex: 1;
+    border: none;
+    padding: 10px 40px 10px 15px; /* Ajusta padding para que no se superponga con los iconos */
+    border-radius: 25px;
+    font-size: 22px;
+    max-width: 100%; /* Permite que la barra de búsqueda ocupe el espacio disponible */
+    outline: none; /* Elimina el contorno por defecto */
+    background-color: #fff; /* Asegura que el fondo sea blanco */
+}
+
+.search-bar:focus {
+    outline: 2px solid #fff; /* Hace que el outline sea del mismo color que el fondo */
+}
+
+.search-icon {
+    position: absolute;
+    right: 40px; /* Ajusta la posición del icono de búsqueda */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.clear-icon {
+    position: absolute;
+    right: 10px; /* Ajusta la posición del icono de borrar */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search-icon img, .clear-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.button {
+    text-decoration: none;
+    color: #fff;
+    background-color: #1D938A;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button.active {
+    background-color: #0a7e6a;
+}
+
+.button:hover {
+    background-color: #0a7e6a;
+    transform: scale(1.05);
+}
